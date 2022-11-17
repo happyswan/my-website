@@ -1,0 +1,179 @@
+/* A B O U T   M E   C S S */
+
+#about-me
+{
+    padding-top: 8rem;
+    padding-bottom: 10rem;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(to top right, var(--color-secondary-background), var(--color-white));
+}
+
+#about-me .content-container .articles
+{
+    width: 60%;
+}
+
+#about-me article:not(:first-child)
+{
+    margin-top: 4rem;
+}
+
+#about-me article
+{
+    width: 100%;
+    overflow: hidden;
+}
+
+#about-me article h3
+{
+    border-bottom: 1px solid var(--color-primary);
+    padding-bottom: .25rem;
+    margin-bottom: 2rem;
+}
+
+#about-me article > p
+{
+    margin-bottom: 1rem;
+}
+
+#about-me article p b
+{
+    letter-spacing: .5px;
+}
+
+#about-me article .more-btn--link
+{
+    margin: auto;
+    margin-top: 3rem!important;
+}
+
+#about-me .technology-container
+{   
+    width: calc(100% * 2.2);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    animation-name: technology-carousel;
+    animation-timing-function: ease-in-out;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#about-me .technology-container:hover
+{
+    animation-play-state: paused;
+}
+
+#about-me .technology-container .technology
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    width: 10rem;
+}
+
+#about-me .technology-container *
+{
+    text-align: center;
+}
+
+#about-me .technology-container .technology img
+{
+    height: 4rem;
+    display: block;
+}
+
+#about-me .technology-container .technology .description
+{
+    display: block;
+    width: 10rem;
+    margin-top: 1rem;
+}
+
+#about-me .technology-container .technology .mark
+{
+    margin-top: .5rem;
+    margin-bottom: 1.5rem;
+}
+
+#about-me .technology-container .technology .mark i
+{
+    font-size: 1.5rem;
+    color: var(--color-red);
+}
+
+#about-me .background-title
+{
+    writing-mode: vertical-rl;
+    max-width: 25rem;
+    width: 30%;
+    font-size: 10rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#about-me .background-title p
+{
+    background-image: linear-gradient(85deg, var(--color-red), var(--color-blue));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    transform: scaleX(1.4);
+}
+
+
+
+
+/* R E S P O N S I V E */
+
+@media only screen and (max-width: 992px)
+{
+    .articles,
+    .background-title
+    {
+        width: 100%!important;
+    }
+
+    #about-me .background-title
+    {
+        writing-mode: horizontal-tb;
+        max-width: none;
+        width: 100%!important;
+        font-size: 5rem;
+        margin-top: 2rem;
+    }
+}
+
+@media only screen and (max-width: 790px)
+{
+    #about-me .background-title
+    {
+        font-size: 4rem;
+    }
+}
+
+@media only screen and (max-width: 650px)
+{
+    #about-me .background-title
+    {
+        font-size: 3rem;
+    }
+}
+
+@media only screen and (max-width: 520px)
+{
+    #about-me .background-title
+    {
+        font-size: 2rem;
+    }
+}

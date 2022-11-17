@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /przerwa-techniczna.php
+Disallow: /api/
+Disallow: /asq/
+Disallow: /bledy/
+Disallow: /libs/
+
+Sitemap: https://kkmiec.pl/sitemap.xml

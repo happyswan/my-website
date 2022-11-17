@@ -1,0 +1,35 @@
+/* S C R O L L   T O   T O P   B U T T O N   C S S */
+
+#scroll_to_top-btn
+{
+    z-index: 99;
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    border-radius: 50%;
+    width: 3.5rem;
+    height: 3.5rem;
+    background: var(--color-primary);
+    opacity: .8;
+    box-shadow: 1px 1px 8px rgb(0 0 0 / 30%);
+}
+
+#scroll_to_top-btn:hover
+{
+    -moz-filter: brightness(.9);
+    -webkit-filter: brightness(.9);
+    filter: brightness(.9);
+}
+
+#scroll_to_top-btn
+{
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#scroll_to_top-btn i
+{
+    color: #fff;
+}

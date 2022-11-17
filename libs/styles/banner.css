@@ -1,0 +1,119 @@
+/* B A N N E R   C S S */
+
+#banner
+{
+    height: 40rem;
+    overflow: hidden;
+    position: relative;
+}
+
+#banner::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top right, var(--color-secondary-background), var(--color-white));
+    opacity: .9;
+}
+
+#banner .banner-logo,
+#banner .owner-figure
+{
+    position: absolute;
+}
+
+#banner .banner-logo
+{
+    mix-blend-mode: hard-light;
+    opacity: .1;
+}
+
+#banner .site-title--container
+{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: calc(50% - var(--grid-gap));
+    height: 100%;
+    padding-top: 6.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+
+
+
+/* R E S P O N S I V E */
+
+@media only screen and (max-width: 1680px)
+{
+    h1
+    {
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 1350px)
+{
+    .site-title--container p
+    {
+        font-size: .9rem;
+    }
+
+    h1
+    {
+        font-size: 1.2rem;
+        line-height: 1.4rem;
+        margin-bottom: .6rem;
+    }
+}
+
+@media only screen and (max-width: 1160px)
+{
+    #banner .banner-logo
+    {
+        width: 80%;
+    }
+    
+    #banner .site-title--container
+    {
+        left: 10%;
+        width: 80%;
+        align-items: center;
+    }
+
+    #banner .site-title--container *
+    {
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 850px)
+{
+    #banner .banner-logo
+    {
+        width: 120%;
+    }
+}
+
+@media only screen and (max-width: 550px)
+{
+    #banner .banner-logo
+    {
+        width: 140%;
+    }
+}
+
+@media only screen and (max-width: 450px)
+{
+    #banner .banner-logo
+    {
+        display: none;
+    }
+}

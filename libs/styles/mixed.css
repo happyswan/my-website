@@ -1,0 +1,369 @@
+/* M I X E D   C S S */
+
+.nav-link--container li a
+{
+    display: inline-block;
+}
+
+#navbar .nav-link--container li a i
+{
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    margin-top: .1rem;
+    margin-left: .5rem;
+    color: var(--color-primary);
+}
+
+.border-link::after
+{
+    display: block;
+    content: '';
+    background: var(--color-primary);
+    width: 0;
+    height: 1px;
+    transition: all .3s linear;
+    margin-left: 50%;
+}
+
+.border-link:hover::after
+{
+    margin-left: 0;
+    width: 100%;
+}
+
+#navbar .nav-link--container li:hover a,
+footer .content .item .nav-link--container li a:hover
+{
+    color: var(--color-primary);
+}
+
+#services,
+#about-me,
+#portfolio,
+#contact,
+footer .content
+{
+    padding-left: var(--grid-gap);
+    padding-right: var(--grid-gap);
+}
+
+.title-container
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.title-container img
+{
+    height: 3rem;
+}
+
+.title-container img:last-child
+{
+    transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+}
+
+.title-container h2
+{
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+.img-bg
+{
+    -moz-filter: brightness(.7);
+    -webkit-filter: brightness(.7);
+    filter: brightness(.7);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.img-bg img
+{
+    -moz-filter: blur(1px);
+    -webkit-filter: blur(1px);
+    filter: blur(1px);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.box-container .img-bg
+{
+    mix-blend-mode: hard-light;
+    opacity: .2;
+}
+
+.box-container .img-bg img
+{
+    -moz-filter: blur(0);
+    -webkit-filter: blur(0);
+    filter: blur(0);
+}
+
+.card-container .card
+{
+    padding: 4rem 1rem 4rem 1rem;
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem;
+    height: 34rem;
+}
+
+.card-container::before
+{
+    content: '';
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    width: calc(100% - 2rem);
+    height: calc(100% - 2rem);
+    border-radius: 1rem;
+    box-shadow: 1px 1px 8px var(--color-black);
+    opacity: .3;
+}
+
+.card-container .card p
+{
+    font-size: .9rem;
+}
+
+.card-container .card *
+{
+    text-align: center;
+}
+
+.card-container .card::after
+{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    z-index: -1;
+    background: var(--color-white);
+    opacity: .7;
+}
+
+.card-container .card .price-description--container
+{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.card-container .card .price-description--container p
+{
+    margin-bottom: .6rem;
+    font-size: .8rem;
+}
+
+.card-container .card .price-description--container p:last-child
+{
+    width: 100%;
+}
+
+.card-container .card .order-container
+{
+    position: absolute;
+    bottom: 2rem;
+    left: 1rem;
+    width: calc(100% - 2rem);
+    height: 3rem;
+    border-radius: .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-container .card .order-container p
+{
+    letter-spacing: .1px;
+    font-size: 1rem;
+    color: var(--color-white);
+}
+
+.card-container .card .order-container p i
+{
+    margin-left: .25rem;
+    color: var(--color-white);
+}
+
+.card-container .card .order-container:hover
+{
+    -moz-filter: brightness(.95);
+    -webkit-filter: brightness(.95);
+    filter: brightness(.95);
+    -moz-filter: brightness(.95);
+    -webkit-filter: brightness(.95);
+    -webkit-filter: brightness(.95);
+}
+
+.card-container .card .order-container:hover i
+{
+    margin-left: .5rem;
+}
+
+.badge
+{
+    position: absolute;
+    right: -1.88rem;
+    top: 1.83rem;
+}
+
+.badge p
+{
+    opacity: .9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--color-primary);
+    color: var(--color-white);
+    font-size: .7rem;
+    position: relative;
+    width: 9rem;
+    height: 1.6rem;
+    transform-origin: center;
+    transform: rotate(45deg);
+}
+
+.more-btn--link
+{
+    margin-top: 1rem;
+    width: 50%;
+    border-radius: .5rem;
+    background: var(--color-primary);
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+.more-btn--link *
+{
+    color: var(--color-white);
+}
+
+.more-btn--link:hover
+{
+    -moz-filter: brightness(.95);
+    -webkit-filter: brightness(.95);
+    -webkit-filter: brightness(.95);
+    filter: brightness(.95);
+}
+
+.more-btn--link p
+{
+    letter-spacing: .3px;
+}
+
+.more-btn--link i
+{
+    margin-left: .25rem;
+}
+
+.more-btn--link:hover i
+{
+    margin-left: .5rem;
+}
+
+
+.content-container
+{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.title-container
+{
+    margin-bottom: 6rem;
+}
+
+.row
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.row .card-container
+{
+    width: calc(100% / 3);
+    padding: 1rem;
+    position: relative;
+}
+
+.red-border
+{
+    border: 1px solid var(--color-red);
+}
+
+
+
+
+/* R E S P O N S I V E */
+
+@media only screen and (max-width: 1450px)
+{
+    #services, #about-me, #portfolio, #contact, footer .content
+    {
+        --grid-gap: 5%;
+    }
+}
+
+@media only screen and (max-width: 1120px)
+{
+    h2
+    {
+        font-size: 3rem;
+    }
+}
+
+@media only screen and (max-width: 992px)
+{
+    #services, #about-me, #portfolio, #contact, footer .content
+    {
+        --grid-gap: 2rem;
+    }
+}
+
+@media only screen and (max-width: 840px)
+{
+    h2
+    {
+        font-size: 2rem;
+    }
+}
+
+@media only screen and (max-width: 640px)
+{
+    h2
+    {
+        font-size: 1.5rem;
+    }
+
+    .title-container img
+    {
+        height: 2rem;
+    }
+}

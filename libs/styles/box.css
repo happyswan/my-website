@@ -1,0 +1,70 @@
+/* B O X   C S S */
+
+.box-container
+{
+    padding-top: 4rem;
+    padding-bottom: 14rem;
+    position: relative;
+    perspective: 1000px;
+    /* display: none; */
+    visibility: hidden;
+    opacity: 0;
+}
+
+.box-container *
+{
+    color: var(--color-white);
+}
+
+.box-container i
+{
+    font-size: 1.4rem;
+}
+
+.box-container .front,
+.box-container .left,
+.box-container .shadow
+{
+    position: absolute;
+    top: 4rem;
+    height: 10rem;
+    background-color: var(--color-primary);
+}
+
+.box-container .front,
+.box-container .left
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-container .front,
+.box-container .shadow
+{
+    left: calc(50% - 1.8rem);
+    width: 6rem;
+    transform-origin: left;
+    transform: perspective(1000px) rotateY(20deg);
+}
+
+.box-container .left
+{
+    left: calc(50% - 3.8rem);
+    width: 2rem;
+    background-color: var(--color-primary);
+    -moz-filter: brightness(.8);
+    -webkit-filter: brightness(.8);
+    filter: brightness(.8);
+    transform-origin: right;
+    transform: perspective(1000px) rotateY(-20deg);
+}
+
+.box-container .shadow
+{
+    width: 10rem;
+    background: linear-gradient(180deg, transparent 40%, black);
+    transform-origin: bottom left;
+    transform: perspective(1000px) rotateY(60deg) rotateX(80deg) rotateZ(-5deg) translateY(-1.1rem) translateX(-1.7rem);
+    opacity: .4;
+}
